@@ -1,12 +1,27 @@
 #!/bin/bash
 # create Private Pods
 
-
-
-
 getPodName () {
-	clear
-	echo "Get POD NAME"
+clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|"              
+                                        
+
+	echo
+	echo ">>>>> Get POD NAME <<<<<<"
 	echo
 	echo "Please Enter [POD_NAME]"
 	read podName
@@ -19,8 +34,24 @@ getPodName () {
 }
 
 createPod () {
+clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|" 
 	echo
-	echo "Creating POD"
+	echo ">>>>> Creating POD <<<<<<"
 	echo
 	echo "your pod name: $podName"
 	pod lib create $1
@@ -29,8 +60,24 @@ createPod () {
 
 
 createRepository () {
+clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|" 
 	echo
-	echo "Creating Repository"
+	echo ">>>>> Creating Repository <<<<<<"
 	echo
 	echo "Enter Your Repository Link"
 	read repLk
@@ -47,8 +94,24 @@ createRepository () {
 
 
  createGitRemote () {
+ clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|" 
 	echo
-	echo "Add Git remote"
+	echo ">>>>> Add Git remote <<<<<<"
 	echo
  	repLink = $1
  	cd $podName
@@ -62,8 +125,24 @@ createRepository () {
  }
 
  getTagVersion () {
+ clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|" 
 	echo
- 	echo "Add Tag Version"
+ 	echo ">>>>> Add Tag Version <<<<<<"
 	echo
  	echo "Enter your Version:"
 	read versionTag
@@ -82,8 +161,24 @@ createRepository () {
  }
 
  createPodRepo () {
+clear
+echo "  ____  ___ ___  ____    ___  _ "        
+echo " /    ||   |   ||    |  /  _]| |  "      
+echo "|  o  || _   _ | |  |  /  [_ | |  "      
+echo "|     ||  \_/  | |  | |    _]| |___"     
+echo "|  _  ||   |   | |  | |   [_ |     |"    
+echo "|  |  ||   |   | |  | |     ||     |"   
+echo "|__|__||___|___||____||_____||_____|"  
+                                        
+echo " ____   ___    ____  ____"               
+echo "|    \ /   \  /    ||    |"              
+echo "|  o  )     ||   __| |  |"               
+echo "|   _/|  O  ||  |  | |  |"               
+echo "|  |  |     ||  |_ | |  |"               
+echo "|  |  |     ||     | |  |"               
+echo "|__|   \___/ |___,_||____|" 
 	echo
-    echo "Creating Pod Repository"
+    echo ">>>>> Creating Pod Repository <<<<<<"
 	echo
 
  	if pod repo add $podName $repLk; then
