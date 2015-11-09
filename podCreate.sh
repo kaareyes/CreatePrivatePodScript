@@ -23,6 +23,7 @@ createPod () {
 	echo
 	echo "your pod name: $podName"
 	pod lib create $1
+    createRepository
 }
 
 
