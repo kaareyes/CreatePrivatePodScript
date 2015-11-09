@@ -6,6 +6,8 @@
 
 getPodName () {
 	clear
+	echo "Get POD NAME"
+	echo
 	echo "Please Enter [POD_NAME]"
 	read podName
 	if  [ ! -z "$podName" -a "$podName" != " " ]; then
@@ -17,13 +19,16 @@ getPodName () {
 }
 
 createPod () { 
-	podName = $1
+	echo "Creating POD"
+	echo
 	echo "your pod name: $podName"
 	pod lib create $1
 }
 
 
 createRepository () {
+	echo "Creating Repository"
+	echo
 	echo "Enter Your Repository Link"
 	read repLk
 	if  [ ! -z "$repLk" -a "$repLk" != " " ]; then
@@ -39,9 +44,9 @@ createRepository () {
 
 
  createGitRemote () {
-
+	echo "Add Git remote"
+	echo
  	repLink = $1
- 	echo "$podName"
  	cd $podName
 	git init
 	git remote add origin $1
@@ -53,6 +58,8 @@ createRepository () {
  }
 
  getTagVersion () {
+ 	echo "Add Tag Version"
+	echo
  	echo "Enter your Version:"
 	read versionTag
 
@@ -68,8 +75,10 @@ createRepository () {
  }
 
  createPodRepo () {
+ 	 echo "Creating Pod Repository"
+	echo
 
- 	if pod repo add $podName $repLink; then
+ 	if pod repo add $podName $repLk; then
 
 	if pod lib lint $podName.podspec -- verbose; then
 		if pod spec lint $podName.podspec -- verbose; then
@@ -92,8 +101,4 @@ else
 fi
  }
 
-
-
 getPodName 
-podName = ""
-repLink = ""
