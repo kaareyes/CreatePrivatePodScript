@@ -20,10 +20,28 @@ read versionTag
 echo "Version: $versionTag"
 git tag -a $versionTag -m "Version $versionTag"
 git push -u origin master
-pod repo add $podName $repLink
-pod lib lint $podName.podspec
-pod spec lint $podName.podspec
-pod repo push $podName.podspec
 
+if pod repo add $podName $repLink; then
+
+	if pod lib lint $podName.podspec; then
+		if pod spec lint $podName.podspec; then
+			pod repo push $podName.podspec
+	
+		else
+			echo "Error  pod spec lint $podName.podspec" 1>&2
+			exit 1
+		fi
+		
+	
+	else
+		echo "Error pod lib lint $podName.podspec" 1>&2
+		exit 1
+	fi
+
+	
+else
+	echo "cant add repo" 1>&2
+	exit 1
+fi
 
 
