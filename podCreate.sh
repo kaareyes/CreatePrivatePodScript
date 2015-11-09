@@ -55,7 +55,7 @@ createRepository () {
 	git init
 	git remote add origin $1
 	git add -A
-	git commit -m "Initial Commit"
+	git commit -m "Add Git remote"
 
 	getTagVersion
 
@@ -71,7 +71,9 @@ createRepository () {
  	if  [ ! -z "$versionTag" -a "$versionTag" != " " ]; then
 		echo "Version: $versionTag"
 		git tag -a $versionTag -m "Version $versionTag"
-		git push -u origin master
+        git tag
+        git push --tags
+        git push -u origin master
         createPodRepo
 		
 	else
