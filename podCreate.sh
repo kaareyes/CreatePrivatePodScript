@@ -20,9 +20,9 @@ read versionTag
 echo "Version: $versionTag"
 git tag -a $versionTag -m "Version $versionTag"
 git push -u origin master
+pod repo add $podName $repLink
 pod lib lint $podName.podspec
 pod spec lint $podName.podspec
-pod repo add $podName $repLink
 pod repo push $podName.podspec
 
 
