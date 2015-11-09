@@ -20,6 +20,7 @@ createPod () {
 	podName = $1
 	echo "your pod name: $podName"
 	pod lib create $1
+	createRepository
 }
 
 
@@ -61,7 +62,7 @@ createRepository () {
 		git tag -a $versionTag -m "Version $versionTag"
 		git push -u origin master
 
-		
+		createPodRepo
 	else
 		getTagVersion
 	fi
@@ -93,7 +94,6 @@ fi
  }
 
 
-
-getPodName 
 podName = ""
 repLink = ""
+getPodName 
