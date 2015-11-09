@@ -88,9 +88,9 @@ createRepository () {
 
  	if pod repo add $podName $repLk; then
 
-	if pod lib lint $podName.podspec -- verbose; then
-		if pod spec lint $podName.podspec -- verbose; then
-			pod repo push $podName.podspec
+	if pod lib lint $podName.podspec --verbose; then
+		if pod spec lint $podName.podspec --verbose; then
+			pod repo push $podName $podName.podspec
 		else
 			echo "Error  pod spec lint $podName.podspec" 1>&2
 			exit 1
