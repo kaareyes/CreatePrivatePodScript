@@ -72,7 +72,7 @@ createRepository () {
 		echo "Version: $versionTag"
 		git tag -a $versionTag -m "Version $versionTag"
 		git push -u origin master
-
+        createPodRepo
 		
 	else
 		getTagVersion
