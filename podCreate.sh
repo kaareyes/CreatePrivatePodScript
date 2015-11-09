@@ -18,7 +18,8 @@ getPodName () {
 
 }
 
-createPod () { 
+createPod () {
+	echo
 	echo "Creating POD"
 	echo
 	echo "your pod name: $podName"
@@ -28,6 +29,7 @@ createPod () {
 
 
 createRepository () {
+	echo
 	echo "Creating Repository"
 	echo
 	echo "Enter Your Repository Link"
@@ -45,6 +47,7 @@ createRepository () {
 
 
  createGitRemote () {
+	echo
 	echo "Add Git remote"
 	echo
  	repLink = $1
@@ -59,6 +62,7 @@ createRepository () {
  }
 
  getTagVersion () {
+	echo
  	echo "Add Tag Version"
 	echo
  	echo "Enter your Version:"
@@ -76,7 +80,8 @@ createRepository () {
  }
 
  createPodRepo () {
- 	 echo "Creating Pod Repository"
+	echo
+    echo "Creating Pod Repository"
 	echo
 
  	if pod repo add $podName $repLk; then
