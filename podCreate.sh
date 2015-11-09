@@ -23,10 +23,9 @@ git push -u origin master
 
 if pod repo add $podName $repLink; then
 
-	if pod lib lint $podName.podspec; then
-		if pod spec lint $podName.podspec; then
+	if pod lib lint $podName.podspec -- verbose; then
+		if pod spec lint $podName.podspec -- verbose; then
 			pod repo push $podName.podspec
-	
 		else
 			echo "Error  pod spec lint $podName.podspec" 1>&2
 			exit 1
